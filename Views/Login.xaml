@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gaguirreexamen.Views.Login"
+             Title="Login">
+    <VerticalStackLayout
+        Padding="20"
+        Spacing="20">
+
+        <Label 
+            Text="LOGIN"
+            HorizontalTextAlignment="Center"
+            TextColor="Red"
+           FontSize "20"/>
+        <Image Source="LOGO-UISRAEL.png"
+               WidthRequest="100"
+               HorizontalOptions="Center"/>
+
+        <!-- Grid para Usuario y Contraseña -->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Usuario:" Grid.Row="0" Grid.Column="0" VerticalOptions="Center"/>
+            <Entry x:Name="usernameEntry" Grid.Row="0" Grid.Column="1"/>
+
+            <Label Text="Contraseña:" Grid.Row="1" Grid.Column="0" VerticalOptions="Center"/>
+            <Entry x:Name="passwordEntry" Grid.Row="1" Grid.Column="1" IsPassword="True"/>
+        </Grid>
+
+        <!---- Botón de Iniciar Sesión -->
+        <Button Text="Iniciar Sesión"
+                HorizontalOptions="Center"
+                VerticalOptions="EndAndExpand"
+                Clicked="OnLoginButtonClicked"/>
+
+
+
+
+
+
+
+
+        <Entry x:Name="">
+
+    </VerticalStackLayout>
+</ContentPage>
