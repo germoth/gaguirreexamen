@@ -1,4 +1,4 @@
-﻿namespace gaguirreexamen
+﻿namespace GAguirreExamen
 {
     public partial class App : Application
     {
@@ -6,7 +6,7 @@
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage (new View.LoginPage ());
+            MainPage = new NavigationPage(new Vistas.VLogin());
         }
     }
 }

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GAguirreExamen.Vistas.VRegistro"
+             Title="Registro">
+    <ScrollView>
+        <VerticalStackLayout 
+            Padding="30,0"
+            Spacing="25">
+            <Label 
+                x:Name="lbl_usuario"
+                Text=""
+                TextColor="Red"
+                FontSize="20"
+                VerticalOptions="Center" 
+                HorizontalOptions="End" />
+
+            <Label 
+                Text="REGISTRO"
+                TextColor="Red"
+                FontSize="30"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <Grid Padding="30" RowSpacing="40" ColumnSpacing="40">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label
+                    Text="Fecha:"
+                    TextColor="Red"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    Grid.Row="0"
+                    Grid.Column="0"/>
+
+                <DatePicker x:Name="dtp_fecha" 
+                    Format="dd/MM/yyyy" 
+                    Date="04/04/2024"  
+                    Grid.Row="0"    
+                    Grid.Column="1"/>
+                <Label
+                    Text="Pais:"
+                    TextColor="Red"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    Grid.Row="1" Grid.Column="0"/>
+                <Picker x:Name="pkr_pais" Title="País:" Grid.Row="1" Grid.Column="1">
+                    <Picker.Items>
+                        <x:String>Ecuador</x:String>
+                        <x:String>España</x:String>
+                        <x:String>EE.UU</x:String>
+                        <x:String>Colombia</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label
+                    Text="Ciudad:"
+                    TextColor="Red"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    Grid.Row="2" Grid.Column="0"/>
+                <Picker x:Name="pkr_ciudad" Title="Ciudad:" Grid.Row="2" Grid.Column="1">
+                    <Picker.Items>
+                        <x:String>Quito</x:String>
+                        <x:String>Guayaquil</x:String>
+                        <x:String>Cuenca</x:String>
+                        <x:String>Loja</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label
+                    Text="Monto Inicial:"
+                    TextColor="Red"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start"
+                    Grid.Row="3" Grid.Column="0"/>
+                 <Entry x:Name="txt_monto"
+                    Keyboard="Numeric"    
+                    Placeholder="Ingrese el Monto Inicial"
+                    Grid.Row="3" Grid.Column="1"/>
+
+                <Button
+                    x:Name="btn_calcular"
+                    Text="Calcular P.Mensual" 
+                    Clicked="btn_calcular_Clicked"
+                    HorizontalOptions="Fill"  Grid.Row="4" Grid.Column="0"/>
+                
+                <Entry x:Name="lbl_pMensual"
+                    Text="0"
+                    IsReadOnly="True"
+                    Grid.Row="4" Grid.Column="1"/>
+            </Grid>
+
+            <Grid RowSpacing="40" ColumnSpacing="40">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label
+                     Text="Nombre:"
+                    TextColor="Red"
+                     Grid.Row="0"
+                     Grid.Column="0"/>
+                <Label
+                     Text="Apellido:"
+                    TextColor="Red"
+                    Grid.Row="0"
+                    Grid.Column="1"/>
+
+                <Label
+                     Text="Edad:"
+                    TextColor="Red"
+                    Grid.Row="0"
+                    Grid.Column="2"/>
+
+                <Entry x:Name="txt_nombre"
+                      Placeholder="Ingrese el Nombre"
+                      Grid.Row="1"
+                      Grid.Column="0"/>
+                <Entry x:Name="txt_apellido"
+                      Placeholder="Ingrese el Apellido"
+                      Grid.Row="1"
+                      Grid.Column="1"/>
+                <Entry x:Name="txt_edad"
+                      Placeholder="Ingrese la Edad"
+                      Keyboard="Numeric"
+                      Grid.Row="1"
+                      Grid.Column="2"/>
+            </Grid>
+            <Button
+              x:Name="btn_resumen"
+              Text="Ver Resumen" 
+              Clicked="btn_resumen_Clicked"
+              HorizontalOptions="Fill"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

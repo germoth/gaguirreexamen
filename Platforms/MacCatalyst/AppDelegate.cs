@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace gaguirreexamen
+namespace GAguirreExamen
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

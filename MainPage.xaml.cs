@@ -1,4 +1,4 @@
-﻿namespace gaguirreexamen
+﻿namespace GAguirreExamen
 {
     public partial class MainPage : ContentPage
     {

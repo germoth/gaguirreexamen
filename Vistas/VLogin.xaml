@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GAguirreExamen.Vistas.VLogin"
+             BackgroundColor="White"
+             Title="Login">
+    <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+        <Label 
+            Text="Iniciar Sessión"
+            TextColor="Red"
+            FontSize="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Image
+             Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"
+             HeightRequest="185"
+             Aspect="AspectFit" />
+
+        <Grid RowSpacing="40" ColumnSpacing="40">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label
+                Text="Usuario:"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level2"
+                Grid.Row="0"
+                Grid.Column="0"/>
+
+            <Entry x:Name="txt_usuario"
+                Placeholder="Ingrese el Usuario"
+                MaxLength="10"
+                Grid.Row="0"
+                Grid.Column="1"/>
+            <Label
+                Text="Password:"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level2" 
+                Grid.Row="1" Grid.Column="0"/>
+            <Entry x:Name="txt_password"
+                Placeholder="Ingrese la contraseña"
+                IsPassword="True"
+                Grid.Row="1" Grid.Column="1"/>
+           
+        </Grid>
+        <Button
+             x:Name="btn_login"
+             Text="Iniciar" 
+             Clicked="btn_login_Clicked"
+             HorizontalOptions="Fill"
+            />
+    </VerticalStackLayout>
+</ContentPage>

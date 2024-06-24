@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace gaguirreexamen
+namespace GAguirreExamen
 {
     public static class MauiProgram
     {

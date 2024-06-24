@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace gaguirreexamen
+namespace GAguirreExamen
 {
     [Application]
     public class MainApplication : MauiApplication
